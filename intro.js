@@ -13,9 +13,9 @@ for (var i = 0; i<6; i++){
 // Create an array with some colors
 var colors = ["red", "blue", "green"]
 // Iterate the color array and print the colors in different lines.
-colors.foreach(function(food){
+colors.forEach(function(food){
 	console.log(food);
-}
+});
 // Filter the array to exclude the red color (the array should contain all the previous colors except the red one).
 var red = colors.filter(function(color){
 	return color !== "red";
@@ -24,16 +24,21 @@ console.log(red)
 // Transform the array to add "!!" at the end of each color. (The result should be something like: "red!!", "blue!!", "green!!"... )
 
 var bright = colors.reduce(function(shout){
-	return shout + "!!"
-}
-console.log(bright)
+	return shout + "!!";
+});
+console.log(bright);
 // Create an object with name, surname and age as a properties and create a function to show the person information as "Luis Rovirosa has 32 years".
 var person = {
 	name: "Remi",
 	surname: "Varnagiris",
 	age: 23
+};
+
+function printDetails(){
+	console.log(person.name);
+	console.log(person.surname);
+	console.log(person.age);
 }
 
-function details(){
-	console.log(person)
-}
+printDetails();
+
